@@ -1,0 +1,7 @@
+<suite name = "Restassured">
+    <test name = "Launch Test">
+        <classes>
+            <class name = "com.keycloak.test.LaunchTest" />
+        </classes>
+    </test>
+</suite>
