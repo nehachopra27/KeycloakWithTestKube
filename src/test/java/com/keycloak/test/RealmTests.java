@@ -3,11 +3,9 @@ package com.keycloak.test;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -17,7 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class RealmTests {
 
-    String url="https://keycloak.192.168.64.11.nip.io/";
+    String url="https://keycloak.192.168.64.12.nip.io/";
     String realm="master";
     String realmPath="admin/realms/"+realm;
     String tokenUrl="realms/master/protocol/openid-connect/token";
@@ -25,7 +23,7 @@ public class RealmTests {
     String clientsPath=realmPath+"/clients";
     String accessToken;
 
-    @BeforeTest
+    @Before
     public void validatetestTokenStatusCodeRceived(){
         Response response=given().relaxedHTTPSValidation().baseUri(url).basePath(tokenUrl)
                 .contentType("application/x-www-form-urlencoded")
