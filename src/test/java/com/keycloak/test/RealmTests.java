@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.given;
 
 public class RealmTests {
 
-    String url="https://keycloak.192.168.64.12.nip.io/";
+    String url="https://keycloak.192.168.39.19.nip.io/";
     String realm="master";
     String realmPath="admin/realms/"+realm;
     String tokenUrl="realms/master/protocol/openid-connect/token";
