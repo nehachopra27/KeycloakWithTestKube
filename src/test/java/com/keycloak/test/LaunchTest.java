@@ -7,7 +7,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
 public class LaunchTest {
-    static String url="https://keycloak.192.168.64.13.nip.io/";
+    static String url="https://keycloak.192.168.64.14.nip.io/";
     static String tokenUrl="realms/master/protocol/openid-connect/token";
 
     @Test
